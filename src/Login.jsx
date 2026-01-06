@@ -4,17 +4,24 @@ export default function Login({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+<<<<<<< HEAD
   const [showSuccess, setShowSuccess] = useState(false);
+=======
+>>>>>>> 285f6e0dff0d9dfbbc860f46933e8482e938d393
 
   const handleLogin = () => {
     // 🔴 Fake login (later replace with API)
     if (email === "admin@gmail.com" && password === "123456") {
       setError("");
+<<<<<<< HEAD
       setShowSuccess(true);
       // Wait for 1.5 seconds to let the user see the professional popup
       setTimeout(() => {
         onLogin();
       }, 1500);
+=======
+      onLogin();
+>>>>>>> 285f6e0dff0d9dfbbc860f46933e8482e938d393
     } else {
       setError("Invalid email or password");
     }
@@ -22,6 +29,7 @@ export default function Login({ onLogin }) {
 
   return (
     <div style={styles.container}>
+<<<<<<< HEAD
       <div style={styles.overlay}></div>
       <div style={styles.card}>
         <div style={styles.header}>
@@ -88,6 +96,32 @@ export default function Login({ onLogin }) {
           </div>
         </div>
       )}
+=======
+      <div style={styles.card}>
+        <h2>Courier Admin Login</h2>
+
+        <input
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          style={styles.input}
+        />
+
+        <input
+          placeholder="Password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          style={styles.input}
+        />
+
+        {error && <p style={styles.error}>{error}</p>}
+
+        <button onClick={handleLogin} style={styles.button}>
+          Login
+        </button>
+      </div>
+>>>>>>> 285f6e0dff0d9dfbbc860f46933e8482e938d393
     </div>
   );
 }
@@ -95,7 +129,10 @@ export default function Login({ onLogin }) {
 const styles = {
   container: {
     height: "100vh",
+<<<<<<< HEAD
     width: "100vw",
+=======
+>>>>>>> 285f6e0dff0d9dfbbc860f46933e8482e938d393
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -103,6 +140,7 @@ const styles = {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+<<<<<<< HEAD
     position: "relative",
     fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
   },
@@ -308,3 +346,39 @@ styleSheet.innerText = `
   }
 `;
 document.head.appendChild(styleSheet);
+=======
+  },
+
+  card: {
+    background: "rgba(255,255,255,0.9)",
+    padding: 30,
+    borderRadius: 10,
+    boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+
+  input: {
+    padding: 10,
+    margin: 8,
+    width: 250,
+  },
+
+  button: {
+    padding: 10,
+    width: 250,
+    background: "#1e90ff",
+    color: "#fff",
+    border: "none",
+    cursor: "pointer",
+    marginTop: 10,
+  },
+
+  error: {
+    color: "red",
+    fontSize: 14,
+    marginTop: 5,
+  },
+};
+>>>>>>> 285f6e0dff0d9dfbbc860f46933e8482e938d393

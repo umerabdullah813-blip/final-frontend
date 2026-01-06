@@ -1,0 +1,55 @@
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.filter-bar select,
+.filter-bar input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.filter-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background: #1d4ed8;
+}
+
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.delivered {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.returned {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.cancelled {
+  background: #e5e7eb;
+  color: #374151;
+}

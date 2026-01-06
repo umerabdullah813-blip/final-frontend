@@ -1,0 +1,56 @@
+.customer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.customer-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.customer-card:hover {
+  transform: translateY(-4px);
+}
+
+.customer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customer-header h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.status.active {
+  background: #d4f5e2;
+  color: #0f7a43;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.company {
+  color: #666;
+  font-size: 13px;
+  margin: 6px 0 10px;
+}
+
+.customer-info p {
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.customer-footer {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}

@@ -1,0 +1,391 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  font-family: Arial, sans-serif;
+}
+
+.erp-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+  overflow: visible;
+  flex-direction: row;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #1e293b;
+  padding: 20px;
+  overflow-y: auto;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar-close {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #e9eef6;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ================= SUBMENU ================= */
+.has-submenu {
+  cursor: pointer;
+}
+
+.menu-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 35px;
+  margin: 6px 0 8px;
+}
+
+.submenu li {
+  padding: 6px 0;
+  font-size: 13px;
+  color: #cbd5f5;
+  cursor: pointer;
+}
+
+.submenu li:hover,
+.submenu li.active {
+  color: #fff;
+}
+
+/* ================= MAIN ================= */
+.main {
+  margin-left: 240px;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ================= MOBILE HEADER ================= */
+.mobile-header {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 48px;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= HEADER / SEARCH ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  margin-bottom: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px #00000010;
+  position: relative;
+}
+
+.search,
+.customer-select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+/* ================= DASHBOARD CONTENT ================= */
+.content-area {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-top: 0;
+}
+
+/* ================= INFO BOXES ================= */
+.left-box-column {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px #00000014;
+}
+
+.info-box h3 {
+  font-size: 22px;
+  margin: 0;
+  color: #2196f3;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.brown {
+  border-left: 6px solid #c08457;
+}
+
+.orange {
+  border-left: 6px solid #ff9800;
+}
+
+.green {
+  border-left: 6px solid #4caf50;
+}
+
+.blue {
+  border-left: 6px solid #2196f3;
+}
+
+.red {
+  border-left: 6px solid #f44336;
+}
+
+/* ================= CHART ================= */
+.chart-section {
+  flex: 1;
+  padding: 18px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px #00000010;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Desktop: upper alignment */
+}
+
+.chart-section h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #444;
+}
+
+.chart-section canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ================= TABLE / PAGES ================= */
+.page-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.count-badge {
+  background: #1e90ff;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.data-table th {
+  background: #f8f9fb;
+  font-weight: 600;
+}
+
+.table-section {
+  margin-top: 25px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .content-area {
+    flex-direction: column;
+  }
+
+  .left-box-column {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .info-box {
+    width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  .sidebar {
+    left: -260px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-close {
+    display: block;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 10px 12px;
+  }
+
+  .header {
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .content-area {
+    gap: 12px;
+  }
+
+  /* MOBILE RESPONSIVE CHART */
+  .chart-section {
+    min-height: 220px;
+    padding: 12px;
+    justify-content: flex-start;
+  }
+
+  .chart-section canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 260px;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 10px;
+  }
+}
+
+/* ================= DESKTOP / LAPTOP FIX ================= */
+@media (min-width: 769px) {
+  .mobile-header {
+    display: none;
+  }
+
+  .header {
+    position: relative;
+    top: auto;
+    margin-top: 0;
+  }
+
+  .main {
+    padding-top: 20px;
+  }
+
+  .content-area {
+    flex-direction: row;
+    align-items: flex-start;
+    /* Upper alignment desktop */
+  }
+
+  .chart-section {
+    justify-content: flex-start !important;
+    /* Pie chart upar fix */
+  }
+
+  .chart-section canvas {
+    max-height: 320px;
+    /* Desktop chart size controlled */
+  }
+}

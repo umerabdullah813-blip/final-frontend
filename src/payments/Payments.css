@@ -1,0 +1,46 @@
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 14px;
+  font-size: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  background: #f6f7fb;
+  font-weight: 600;
+}
+
+.data-table tr:hover {
+  background: #fafafa;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.paid {
+  background: #d4f5e2;
+  color: #0f7a43;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
